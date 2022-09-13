@@ -8,6 +8,7 @@ const Presentacion = () => {
                 <p>¡Nos casamos!</p>
                 <p>29 OCTUBRE 2022</p>
                 <p>Josefina, Santa Fe</p>
+                
             </section>
             <section>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quibusdam? Reiciendis impedit, ipsam perspiciatis accusantium dignissimos reprehenderit ut inventore molestiae ex nisi distinctio facilis error, earum voluptas dolor voluptates dolore?</p>
