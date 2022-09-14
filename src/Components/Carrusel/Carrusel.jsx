@@ -1,15 +1,14 @@
 import { Carousel } from 'react-bootstrap';
-import fotoA from '../../Multimedia/YOHANA-NAHUEL-129.jpg'
-import fotoB from '../../Multimedia/YOHANA-NAHUEL-132.jpg'
-import fotoC from '../../Multimedia/YOHANA-NAHUEL-203.jpg'
+import fotoB from '../../Multimedia/Horizontal/YOHANA-NAHUEL-203.jpg'
+import fotoC from '../../Multimedia/Horizontal/YOHANA-NAHUEL-132.jpg'
 
 function Carrusel() {
   return (
     <Carousel fade>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src={fotoA}
+          className="d-block w-100 h-50"
+          src={fotoC}
           alt="First slide"
         />
         <Carousel.Caption>
@@ -19,7 +18,7 @@ function Carrusel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-50"
           src={fotoB}
           alt="Second slide"
         />
@@ -31,7 +30,7 @@ function Carrusel() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-          className="d-block w-100"
+          className="d-block w-100 h-50"
           src={fotoC}
           alt="Third slide"
         />
