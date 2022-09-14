@@ -1,6 +1,7 @@
 import './App.css';
 import { useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import presentacion from './Multimedia/YOHANA-NAHUEL-203.jpg';
 import Presentacion from './Components/Presentacion/Presentacion';
@@ -20,13 +21,17 @@ function App() {
   }, []) */
   
   return (
-    <div className="App">
-      <header className="App-header">
-        < Navbar />
-        <img src={presentacion} alt="presentacion" />
-      </header>
-      <Presentacion />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header className="App-header">
+          < Navbar />
+          <img src={presentacion} alt="presentacion" />
+        </header>
+        <Routes>
+          <Route path='/' element={<Presentacion />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
