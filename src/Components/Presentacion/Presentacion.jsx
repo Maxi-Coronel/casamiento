@@ -1,9 +1,11 @@
 import React from 'react';
-import logo from '../../Multimedia/YOHANA-NAHUEL-129.jpg';
+import logo from '../../Multimedia/YOHANA-NAHUEL-33.jpg';
+import FOTO from '../../Multimedia/YOHANA-NAHUEL-203.jpg';
 
 const Presentacion = () => {
     return (
         <main>
+            <img src={FOTO} alt="presentacion" />
             <section>
                 <p>¡Nos casamos!</p>
                 <p>29 OCTUBRE 2022</p>
