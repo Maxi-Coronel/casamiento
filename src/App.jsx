@@ -2,8 +2,8 @@ import './App.css';
 import { useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
 import Carrusel from './Components/Carrusel/Carrusel';
+import Navegador from './Components/Navbar/Navbar';
 import Presentacion from './Components/Presentacion/Presentacion';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          < Navbar />
+          <Navegador />
         </header>
         <Routes>
           <Route path='/' element={<Presentacion />} />
