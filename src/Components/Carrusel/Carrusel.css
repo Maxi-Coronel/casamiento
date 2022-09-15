@@ -1,0 +1,12 @@
+.galeria {
+    margin: 1rem auto;
+    display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+}
+
+.galeria img{
+    width: 46%;
+    margin: 3px auto;
+    border-radius: 7%;
+}
