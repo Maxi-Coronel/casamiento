@@ -6,6 +6,7 @@ import Presentacion from './Components/Presentacion/Presentacion';
 import Ubicacion from './Components/Ubicacion/Ubicacion';
 import Footer from './Components/Footer/Footer';
 import Asistencia from './Components/Asistencia/Asistencia';
+import Deseos from './Components/Deseos/Deseos';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <Route path='/fotos' element={<Carrusel />} />
           <Route path='/asistencia' element={<Asistencia />} />
           <Route path='/ubicacion' element={<Ubicacion />} />
+          <Route path='/deseos' element={<Deseos />} />
         </Routes>
         <Footer />
       </div>

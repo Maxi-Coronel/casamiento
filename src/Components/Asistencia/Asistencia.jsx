@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { collection, getDocs, getFirestore } from 'firebase/firestore'
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import Button from 'react-bootstrap/Button';
+import './Asistencia.css';
 import Form from 'react-bootstrap/Form';
 
 const Asistencia = () => {
@@ -19,7 +20,7 @@ const Asistencia = () => {
   }, [])
 
     return (
-        <Form>
+        <Form className='form-asistencia'>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Nombre</Form.Label>
             <Form.Control type="text" placeholder="Nombre" />
@@ -29,7 +30,7 @@ const Asistencia = () => {
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Password" />
+            <Form.Control type="text" placeholder="Apellido" />
           </Form.Group>
           <Button variant="primary" type="submit">
             Buscar
