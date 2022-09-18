@@ -1,9 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
-import Button from 'react-bootstrap/Button';
 import './Asistencia.css';
-import Form from 'react-bootstrap/Form';
+import {Form, Button} from 'react-bootstrap';
 
 const Asistencia = () => {
     
