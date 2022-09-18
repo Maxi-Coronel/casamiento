@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import './Deseos.css'
 
 const Deseos = () => {
@@ -16,6 +16,9 @@ const Deseos = () => {
                     <Form.Label>Dejanos tu mensaje!</Form.Label>
                     <Form.Control as="textarea" rows={3} />
                 </Form.Group>
+                <Button variant="primary" type="submit">
+                    Enviar
+                </Button>
             </Form>
         </div>
     );
