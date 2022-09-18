@@ -12,7 +12,7 @@ const Presentacion = () => {
                 <p>Josefina, Santa Fe</p>
             </section>
             <section>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, quibusdam? Reiciendis impedit, ipsam perspiciatis accusantium dignissimos reprehenderit ut inventore molestiae ex nisi distinctio facilis error, earum voluptas dolor voluptates dolore?</p>
+                <p>¡A ponerse guapos que nos vamos a casar! Tenemos todo… el traje, el auto, el fotógrafo, el lugar de la fiesta, las flores… Pero nos falta lo más importante: ¡Contar con vos en este día tan especial!</p>
             </section>
             <img src={FOTO} alt="" />
         </main>
