@@ -23,7 +23,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-export const getCollection = async(collections, filter, valueFilter) => {
+/* export const getCollection = async(collections, filter, valueFilter) => {
   let collect = collection(db, collections);
   if (valueFilter) {
     collect = query(collect, where(filter, '==', valueFilter))
@@ -43,7 +43,7 @@ export const updateStock = async(productList) => {
   productList.map(item => {
     return setDoc(doc(db, 'products', item.id), {stock:item.stock - item.quantity}, { merge: true })
   });
-}
+} */
 
 export const sendDesire = async(user, desire) => {
   const dbDeseos = collection(db, "deseos")
@@ -52,14 +52,40 @@ export const sendDesire = async(user, desire) => {
     desire: desire
   }).then(dbDeseos => {
     console.log(dbDeseos.id);
-})
-.catch(error => {
-    console.log(error);
-})
+  })
+  .catch(error => {
+      console.log(error);
+  })
 }
 
-export const sendUser = async(user, id) => {
+export const sendList = async(user) => {
+  const dbDeseos = collection(db, "invitados")
+  await addDoc(dbDeseos, {
+    nombre: user.nombre,
+    apellido: user.apellido,
+    asiste: user.asiste
+  }).then(dbDeseos => {
+    console.log(dbDeseos.id);
+  })
+  .catch(error => {
+      console.log(error);
+  })
+}
+
+export const sendMusic = async(artista, cancion) => {
+  const dbDeseos = collection(db, "canciones")
+  await addDoc(dbDeseos, {
+    artista: artista,
+    cancion: cancion
+  }).then(dbDeseos => {
+    console.log(dbDeseos.id);
+  })
+  .catch(error => {
+      console.log(error);
+  })
+}
+/* export const sendUser = async(user, id) => {
   const collectionRef = collection(db, "users");
   await setDoc(doc(collectionRef, id), {
     user: user });
-}
+} */
