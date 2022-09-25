@@ -1,12 +1,12 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 import './Asistencia.css';
 import {Form, Button} from 'react-bootstrap';
+import { getCollection } from '../../Service/Index';
 
 const Asistencia = () => {
     
-  useEffect(() => {
+  /* useEffect(() => {
     const db = getFirestore();
     const itemCollection = collection(db, 'invitados')
     getDocs(itemCollection)
@@ -16,7 +16,19 @@ const Asistencia = () => {
     .catch(
       err => console.log(err)
     )
-  }, [])
+  }, []) */
+
+  
+  const [busqueda, setBusqueda] = useState()
+
+    const buscar = (event) => {
+      event.preventDefault()
+      const surname = document.querySelector('#surname').value
+      setBusqueda(getCollection("invitados", "apellido", surname)
+      .then(snapshot => {
+        console.log(snapshot.docs.map(doc => doc.data()));
+      }))
+    }
 
     return (
       <>
@@ -26,17 +38,17 @@ const Asistencia = () => {
           <p>Valor de la tarjeta : $ 7.000</p>
           <p>EL pago de tarjeta se puede realizar mediante transferencia bancaria: CBU: ???????</p>
         </section>
-        <Form className='form-asistencia'>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form className='form-asistencia' onSubmit={buscar}>
+          <Form.Group className="mb-3">
             <Form.Label>Nombre</Form.Label>
-            <Form.Control type="text" placeholder="Nombre" />
+            <Form.Control type="text" placeholder="Nombre" id='name'/>
             <Form.Text className="text-muted">
               Por favor escriba su nombre
             </Form.Text>
           </Form.Group>
-          <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Group className="mb-3">
             <Form.Label>Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Apellido" />
+            <Form.Control type="text" placeholder="Apellido" id='surname'/>
           </Form.Group>
           <Button variant="primary" type="submit">
             Buscar

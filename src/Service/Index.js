@@ -84,8 +84,18 @@ export const sendMusic = async(artista, cancion) => {
       console.log(error);
   })
 }
-/* export const sendUser = async(user, id) => {
+export const sendUser = async(user, id) => {
   const collectionRef = collection(db, "users");
   await setDoc(doc(collectionRef, id), {
     user: user });
-} */
+}
+
+export const getCollection = async(collections, filter, valueFilter) => {
+  let collect = collection(db, collections);
+  if (valueFilter) {
+    collect = query(collect, where(filter, '==', valueFilter))
+  }
+  const collectionSnapshot = await getDocs(collect);
+  const collectionList = collectionSnapshot.docs.map(doc => doc.data());
+  return collectionSnapshot;
+}

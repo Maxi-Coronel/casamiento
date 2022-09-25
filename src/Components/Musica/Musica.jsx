@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { sendList, sendMusic } from '../../Service/Index';
 import { List } from '../Array/ListaInvitados';
 import './Musica.css'
 
 const Musica = () => {
-
-    const lista = List
-/* 
-    lista.map((i, key) => sendList(i)) */
-
     
     const [enviado, setEnviado] = useState(false)
 
