@@ -25,8 +25,8 @@ const ItemBusqueda = ({ documento, name, texto }) => {
                 <hr />
                 {!enviar
                 ?<div>
-                    <p>{name}: {documento.apellido}</p>
-                    <p>{texto}: {documento.nombre}</p>
+                    <p>Apellido: {documento.apellido}</p>
+                    <p>Nombre: {documento.nombre}</p>
                     <Form onSubmit={updateAttendance}>
                     <Form.Group className="mb-3">
                         <section className='flex'>

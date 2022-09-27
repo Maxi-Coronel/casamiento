@@ -48,10 +48,6 @@ const Asistencia = () => {
         {busqueda == ""
           ? <Form className='form-asistencia' onSubmit={buscar}>
           <Form.Group className="mb-3">
-            <Form.Label>Nombre</Form.Label>
-            <Form.Control type="text" placeholder="Nombre" id='name'/>
-          </Form.Group>
-          <Form.Group className="mb-3">
             <Form.Label>Apellido</Form.Label>
             <Form.Control type="text" placeholder="Apellido" id='surname'/>
           </Form.Group>
