@@ -21,7 +21,7 @@ const firebaseConfig = {
   };
 
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 /* export const getCollection = async(collections, filter, valueFilter) => {
   let collect = collection(db, collections);
@@ -48,8 +48,8 @@ export const updateStock = async(productList) => {
 export const sendDesire = async(user, desire) => {
   const dbDeseos = collection(db, "deseos")
   await addDoc(dbDeseos, {
-    user: user,
-    desire: desire
+    name: user,
+    text: desire
   }).then(dbDeseos => {
     console.log(dbDeseos.id);
   })
@@ -75,8 +75,8 @@ export const sendList = async(user) => {
 export const sendMusic = async(artista, cancion) => {
   const dbDeseos = collection(db, "canciones")
   await addDoc(dbDeseos, {
-    artista: artista,
-    cancion: cancion
+    name: artista,
+    text: cancion
   }).then(dbDeseos => {
     console.log(dbDeseos.id);
   })

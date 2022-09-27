@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ItemDeseos = ({ deseo }) => {
+const ItemDeseos = ({ documento, name, texto }) => {
     return (
             <div className='ItemDeseos-marg'>
                 <hr />
                 <div>
-                    <p>{deseo.user}</p>
-                    <p>{deseo.desire}</p>
+                    <p>{name}: {documento.name}</p>
+                    <p>{texto}: {documento.text}</p>
                 </div>
             </div>
     );

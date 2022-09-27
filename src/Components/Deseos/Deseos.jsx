@@ -26,10 +26,10 @@ const Deseos = () => {
     const desire = (event) => {
         event.preventDefault()
         const name = document.querySelector('#name').value
-        const desire = document.querySelector('#desire').value
+        const text = document.querySelector('#desire').value
 
         const send = () => {
-            sendDesire(name, desire)
+            sendDesire(name, text)
         }
         send()
         setEnviado(true)
@@ -53,8 +53,7 @@ const Deseos = () => {
                 </Button>
             </Form>
             : <p>Tu mensaje fue enviado, actualiza para poder verlo</p>}
-            {deseos?.map((deseo, key) => <ItemDeseos key={key} deseo={deseo}/>)}
-            
+            {deseos?.map((deseo, key) => <ItemDeseos key={key} documento={deseo} name={"Nombre"} texto={"Deseo"}/>)}
         </div>
     );
 };
