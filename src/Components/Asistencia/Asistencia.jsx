@@ -46,15 +46,16 @@ const Asistencia = () => {
           <p>Por favor enviarnos el comprobante de pago al 3564415573 / 3564500306</p>
         </section>
         {busqueda == ""
-          ? <Form className='form-asistencia' onSubmit={buscar}>
-          <Form.Group className="mb-3">
-            <Form.Label>Apellido</Form.Label>
-            <Form.Control type="text" placeholder="Apellido" id='surname'/>
-          </Form.Group>
-          <Button variant="primary" type="submit">
-            Buscar
-          </Button>
-        </Form>
+          ?
+              <Form className='form-asistencia' onSubmit={buscar}>
+                <Form.Group className="mb-3">
+                  <Form.Label>Apellido</Form.Label>
+                  <Form.Control type="text" placeholder="Recuerda tu inicial en mayúscula" id='surname'/>
+                </Form.Group>
+                <Button variant="primary" type="submit">
+                  Buscar
+                </Button>
+              </Form>
         :busqueda?.map((deseo, key) => <ItemBusqueda key={key} documento={deseo} name={"Nombre"} texto={"Deseo"}/>)}
         
       </>
