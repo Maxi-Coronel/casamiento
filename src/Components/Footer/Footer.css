@@ -4,13 +4,14 @@ html {
 }
 body {
     margin: 0;
-    margin-bottom: 90px;
+    margin-bottom: 110px;
 }
 .footer {
-    background-color: black;
+    background-color: #91aec4;
     position: absolute;
     bottom: 0;
-    height: 80px;
+    height: 100px;
     width: 100%;
-    color: white;
+    color: black;
+    padding-top: 20px;
 }
