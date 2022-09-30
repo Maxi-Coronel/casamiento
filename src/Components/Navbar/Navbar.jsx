@@ -6,7 +6,7 @@ import './Navbar.css'
 
 function Navegador() {
   return (
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg">
         <Container className='navbar-margin'>
           <Navbar.Brand as={Link} to="/">Yoha & Nahui</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
