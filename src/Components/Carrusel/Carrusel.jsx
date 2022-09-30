@@ -1,5 +1,6 @@
 import { Carousel } from 'react-bootstrap';
 import './Carrusel.css'
+import fotoA from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-206.jpg'
 import fotoB from '../../Multimedia/Horizontal/YOHANA-NAHUEL-203.jpg'
 import fotoC from '../../Multimedia/Horizontal/YOHANA-NAHUEL-132.jpg'
 import imgA from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-204.jpg'
@@ -10,6 +11,8 @@ import imgE from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-220.jpg'
 import imgF from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-222.jpg'
 import imgG from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-227.jpg'
 import imgH from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-232.jpg'
+import imgI from '../../Multimedia/Vertical/YOHANA Y NAHUEL-205.jpg'
+import imgK from '../../Multimedia/Vertical/YOHANA Y NAHUEL-208.jpg'
 
 function Carrusel() {
   return (
@@ -18,7 +21,7 @@ function Carrusel() {
         <Carousel.Item>
           <img
             className="d-block w-100 h-50"
-            src={fotoC}
+            src={fotoA}
             alt="First slide"
           />
         </Carousel.Item>
