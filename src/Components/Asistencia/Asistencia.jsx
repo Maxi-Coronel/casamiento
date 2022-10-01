@@ -35,7 +35,14 @@ const Asistencia = () => {
         setBusqueda(snapshot.docs.map(doc => doc.data()));
       })
     }
-    console.log(busqueda);
+    
+    const confirmados = () => {
+      getCollection("invitados", "asiste", "true")
+      .then(snapshot => {
+        console.log(snapshot.docs.map(doc => doc.data()));
+      })
+    }
+    confirmados()
     return (
       <>
         <section className='sec-asistencia'>

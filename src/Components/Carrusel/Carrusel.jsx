@@ -11,8 +11,6 @@ import imgE from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-220.jpg'
 import imgF from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-222.jpg'
 import imgG from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-227.jpg'
 import imgH from '../../Multimedia/Horizontal/YOHANA Y NAHUEL-232.jpg'
-import imgI from '../../Multimedia/Vertical/YOHANA Y NAHUEL-205.jpg'
-import imgK from '../../Multimedia/Vertical/YOHANA Y NAHUEL-208.jpg'
 
 function Carrusel() {
   return (
